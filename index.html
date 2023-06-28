@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <link rel="stylesheet" href="../css/styles.css">
+    <title> Nicole's Weather App </title> 
+     
+    
+</head> 
+<body> 
+    <h1> WEATHER APP </h1> 
+
+    <div id = "cities"> 
+        <h2> Select a city: </h2> 
+        <input type ="text" id="CityInput">
+        <button onclick="startSearch('New York City')"> New York City, USA </button> 
+        <button onclick="startSearch('London')"> London, UK </button>
+        <button onclick="startSearch('Paris')"> Paris, FRA</button>
+        <button onclick="startSearch('Tokyo')"> Tokyo, JPN </button>
+        <button onclick="startSearch('Sydney')">Sydney, AUS </button>
+<!--"ENTER BUTTON" -->
+    </div> 
+
+    <div id = "weatherContainer">    <!-- 5 Day Forecast Section -->
+        <div class="forecast" style="border:1px solid black">
+            <h2>5 Day Forecast</h2>
+            <nav class="level">
+                <div class="forecast-day level-item has-text-centered box" id="0" style="border:1px solid black">
+                Temp:   <div id="day1Temp"> </div>
+                <br />
+                Wind:  <div id="day1Wind"></div>
+                <br />
+                Humid:   <div id="day1Humid"></div>
+                <br />
+                     <span class="weather-icon"></span>
+                    <!-- Day 1 forecast details -->
+
+                </div>
+                <div class="forecast-day level-item has-text-centered box" id="7" style="border:1px solid black">
+                Temp:   <div id="day2Temp"> </div>
+                <br />
+                Wind:    <div id="day2Wind"></div>
+                <br />
+                Humid:    <div id="day2Humid"></div>
+                <br />
+                <span class="weather-icon"></span>
+                    <!-- Day 2 forecast details -->
+
+                </div>
+                
+                <div class="forecast-day level-item has-text-centered box" id="14" style="border:1px solid black">
+                Temp:  <div id="day3Temp"> </div>
+                <br />
+                Wind:   <div id="day3Wind"></div>
+                <br />
+                Humid:    <div id="day3Humid"></div>
+                <br />
+                <span class="weather-icon"></span>
+                    <!-- Day 3 forecast details -->
+
+                </div>
+                <div class="forecast-day level-item has-text-centered box" id="21" style="border:1px solid black">
+                Temp:   <div id="day4Temp"> </div>
+                <br />
+                Wind:   <div id="day4Wind"></div>
+                <br />
+                Humid:   <div id="day4Humid"></div>
+                <br />
+                <span class="weather-icon"></span>
+                   <!-- Day 4 forecast details -->
+                   
+                </div>
+                <div class="forecast-day level-item has-text-centered box" id="28" style="border:1px solid black">
+                Temp:   <div id="day5Temp"> </div>
+                <br />
+                Wind:  <div id="day5Wind"></div>
+                <br />
+                Humid:  <div id="day5Humid"></div>
+                <br />
+                <span class="weather-icon"></span>
+                   <!-- Day 5 forecast details -->
+    
+                </div>
+            </nav>
+        </div>
+     </div> 
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     <script src="../jscript/weather.js"></script>
+    
+</body> 
+</html> 
