@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html> 
 <head>
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title> Nicole's Weather App </title> 
      
     
@@ -11,19 +11,23 @@
 
     <div id = "cities"> 
         <h2> Select a city: </h2> 
-        <input type ="text" id="CityInput">
+        <input type ="text" id="CityInput"><button onclick="startSearch()">ENTER</button>
+        <div id="searches">Previous searches: <select id="searchHerstory" onchange ="showPrevsearch()"></select></div>
+        <br>
+        <div id="modal-invalid" hidden="hidden">No such luck. Try spelling it out? (Portland, Oregon v Portland, OR) </div>
         <button onclick="startSearch('New York City')"> New York City, USA </button> 
         <button onclick="startSearch('London')"> London, UK </button>
         <button onclick="startSearch('Paris')"> Paris, FRA</button>
         <button onclick="startSearch('Tokyo')"> Tokyo, JPN </button>
         <button onclick="startSearch('Sydney')">Sydney, AUS </button>
-<!--"ENTER BUTTON" -->
+        
     </div> 
-
+<!--TODO: Display name of city. -->
     <div id = "weatherContainer">    <!-- 5 Day Forecast Section -->
         <div class="forecast" style="border:1px solid black">
             <h2>5 Day Forecast</h2>
             <nav class="level">
+                <div id="day1date"> </div>
                 <div class="forecast-day level-item has-text-centered box" id="0" style="border:1px solid black">
                 Temp:   <div id="day1Temp"> </div>
                 <br />
@@ -35,6 +39,8 @@
                     <!-- Day 1 forecast details -->
 
                 </div>
+
+                <div id="day2date"> </div>
                 <div class="forecast-day level-item has-text-centered box" id="7" style="border:1px solid black">
                 Temp:   <div id="day2Temp"> </div>
                 <br />
@@ -46,7 +52,8 @@
                     <!-- Day 2 forecast details -->
 
                 </div>
-                
+
+                <div id="day3date"> </div>
                 <div class="forecast-day level-item has-text-centered box" id="14" style="border:1px solid black">
                 Temp:  <div id="day3Temp"> </div>
                 <br />
@@ -58,6 +65,8 @@
                     <!-- Day 3 forecast details -->
 
                 </div>
+
+                <div id="day4date"> </div>
                 <div class="forecast-day level-item has-text-centered box" id="21" style="border:1px solid black">
                 Temp:   <div id="day4Temp"> </div>
                 <br />
@@ -69,6 +78,8 @@
                    <!-- Day 4 forecast details -->
                    
                 </div>
+
+                <div id="day5date"> </div>
                 <div class="forecast-day level-item has-text-centered box" id="28" style="border:1px solid black">
                 Temp:   <div id="day5Temp"> </div>
                 <br />
@@ -85,7 +96,7 @@
      </div> 
 
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-     <script src="../jscript/weather.js"></script>
+     <script src="jscript/weather.js"></script>
     
 </body> 
 </html> 
