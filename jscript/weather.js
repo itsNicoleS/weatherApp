@@ -4,11 +4,7 @@ window.onload = function() {
     for (i=0; i<storedSearchHistory.length; i++){
         $("#searchHerstory").append(new Option(storedSearchHistory[i],storedSearchHistory[i]));  
     }
-    var storedCity = localStorage.getItem('selectedCity');
-     if (storedCity) {
-         //document.getElementById('cityInput').value = storedCity;        
-       }
-    };
+ };
 
     function showPrevsearch(){
         var yermom = $("#searchHerstory").val();
@@ -38,7 +34,7 @@ function startSearch(defaultCity){
         console.log(cityInfo)
         var lat = cityInfo[0].lat;
         var lon = cityInfo[0].lon; 
-
+        $("#cityTitle").text(cityInfo[0].name);
 
         var storedSearchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
         var FUCKING=cityInfo[0].name+", "+cityInfo[0].state;
@@ -74,8 +70,9 @@ function getForecast(lat, lon) {
     });
 }
 function displayWeather(forecast) {
+   
     var dayNum = 1;
-    for (i=0;i < forecast.length && i<=28;i+=7){
+    for (i=0;i < forecast.length && i<=35;i+=7){
         var thisOne = forecast[i];
         var dayDiv = $("#"+i);
         $("#day"+dayNum+"date").text(thisOne.dt_txt.substring(0, 10));
@@ -94,7 +91,7 @@ function displayWeather(forecast) {
 // adding parameters for temp icons
 function getWeatherIcon(tempValue) {
     if (tempValue < 30)
-        return "images/snowflake.png"; // SNOWFLAKE sizes here? 
+        return "images/snowflake.png"; // SNOWFLAKE  
     else if (tempValue >= 30 && tempValue < 65)
         return "images/cloud.webp"; // CLOUD
     else if (tempValue >= 65 && tempValue < 90)
