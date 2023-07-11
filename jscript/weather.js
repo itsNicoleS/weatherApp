@@ -72,9 +72,13 @@ function getForecast(lat, lon) {
 function displayWeather(forecast) {
    
     var dayNum = 1;
-    for (i=0;i < forecast.length && i<=35;i+=7){
+    for (i=0;i<=40;i+=8){
+        if (i == 40){
+            i=39;
+        }
         var thisOne = forecast[i];
         var dayDiv = $("#"+i);
+
         $("#day"+dayNum+"date").text(thisOne.dt_txt.substring(0, 10));
         $("#day"+dayNum+"Temp").text(thisOne.main.temp);
         $("#day"+dayNum+"Wind").text(thisOne.wind.speed);
