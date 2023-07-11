@@ -1,35 +1,21 @@
 # weatherApp
 5 day weather forecast from selected cities. 
-# <Your-Project-Title>
+# <Nicole's-Weather-App>
 
 ## Description
-This is a simple weather app to show five day forecasts for searchable cities. It uses the Clouflare API weather calls to find the data and then my job was to display certain aspects. THis is helpful for people who are confused using a new weather app all the time. I learned how to make an app work with an API. 
+This is a simple weather app to show forecasts for searchable cities. It uses the Clouflare API weather calls to find the data and then my job was to display certain aspects. This is helpful for people who are confused using a new weather app all the time; its simple and easy to use. I learned how hard it is to get an API to cooperate, but I lost enjoyed learning how to navigate around the data. 
 
 ## Installation
-
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+Nothing, just load the page. 
 
 ## Usage
-
-Provide instructions and examples for use. Include screenshots as needed.
-
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+Once page is loaded, simply type whole name for city you're looking for (i.e. "Seattle, Washington")
+When you hit the "ENTER" button you will be provided with a forecast for the next week. 
 
 ## Credits
-
-List your collaborators, if any, with links to their GitHub profiles.
-
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
+Me. cloudflare API. 
 
 ## License
-
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
-
+MIT
 ---
 
